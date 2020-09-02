@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/cons"
+    android:background="@android:color/white"
+    tools:context=".ui.Walkthrough">
+
+ <androidx.viewpager2.widget.ViewPager2
+     android:id="@+id/viewpager2"
+     android:layout_width="@dimen/dimen0dp"
+     android:layout_height="@dimen/dimen0dp"
+     app:layout_constraintTop_toTopOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintBottom_toTopOf="@id/frames"
+     />
+
+    <FrameLayout
+        android:id="@+id/frames"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewpager2"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
+            android:id="@+id/worm_dots_viewpager2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:dotsColor="@android:color/black"
+            app:dotsSize="@dimen/dimen10dp"
+            app:dotsStrokeWidth="@dimen/dimen5dp"
+            app:dotsStrokeColor="@android:color/holo_orange_dark"
+            />
+
+        <TextView
+            android:id="@+id/tv_viewpager_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/dimen12dp"
+            android:text="@string/next"
+            android:onClick="btnNextClickd"
+            android:textSize="20sp"
+            android:layout_marginTop="@dimen/dimen12dp"
+            android:textColor="@android:color/black"
+            />
+
+        <TextView
+            android:id="@+id/tv_viewpager_previous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:textSize="20sp"
+            android:onClick="btnpreviouss"
+            android:layout_marginTop="@dimen/dimen12dp"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="@dimen/dimen12dp"
+            />
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
