@@ -10,9 +10,9 @@
 <ImageView
     android:id="@+id/iv_image"
     android:layout_width="match_parent"
-    android:layout_height="180dp"
-    android:scaleY=".6"
-    android:scaleX=".6"
+    android:layout_height="150dp"
+    android:scaleY=".5"
+    android:scaleX=".5"
     android:src="@drawable/ic_undraw_mobile_development"
     android:contentDescription="@string/app_name" />
 
